@@ -157,7 +157,7 @@ public class Game {
             char first = grid[i][0];
             if (first == grid[i][1] && first == grid[i][2] && first != '-'){
                     winner = Character.toString(first);
-                    result = winner.toUpperCase() + "wins (columns)";
+                    result = winner + " wins";
                     return result;
             }
         }
@@ -167,7 +167,7 @@ public class Game {
             char first = grid[0][j];
             if (first == grid[1][j] && first == grid[2][j] && first != '-'){
                     winner = Character.toString(first);
-                    result = winner.toUpperCase() + "wins (rows)";
+                    result = winner + " wins";
                     return result;
             }
         }
@@ -178,11 +178,11 @@ public class Game {
 
         if (lefttop == grid[1][1] && lefttop == grid[2][2] && lefttop != '-') {
             winner = Character.toString(lefttop);
-            result = winner.toUpperCase() + "wins (diagonal1)";
+            result = winner + " wins";
             return result;
         } else if (righttop == grid[1][1] && righttop == grid[2][0] && righttop != '-'){
             winner = Character.toString(righttop);
-            result = winner.toUpperCase() + "wins (diagonal2)";
+            result = winner + " wins";
             return result;
         }
 
@@ -196,7 +196,7 @@ public class Game {
             }
         }
         if (isFull){
-            result = "Tie";
+            result = "tie";
         }
 
         return result;
